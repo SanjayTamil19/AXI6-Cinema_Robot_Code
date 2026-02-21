@@ -5,6 +5,7 @@ test file for testing basic movement
 """
 
 from tmc_driver.tmc_2209 import *
+import time
 
 
 print("---")
@@ -57,7 +58,9 @@ tmc.set_motor_enabled(True)
 
 for i in range(10):
     tmc.run_to_position_steps(400)  # move to position 400
+    time.sleep(1)
     tmc.run_to_position_steps(0)  # move to position 0
+    time.sleep(1)
 
 # -----------------------------------------------------------------------
 # deactivate the motor current output

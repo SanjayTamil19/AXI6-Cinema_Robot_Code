@@ -57,7 +57,7 @@ tmc.set_motor_enabled(True)
 # -----------------------------------------------------------------------
 
 for i in range(10):
-    tmc.run_to_position_steps(400)  # move to position 400
+    tmc.run_to_position_steps(1600)  # move to position 400
     time.sleep(1)
     tmc.run_to_position_steps(0)  # move to position 0
     time.sleep(1)
